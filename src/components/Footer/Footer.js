@@ -1,6 +1,9 @@
 import React from "react";
 
 const Footer = () => {
+
+    const year = new Date().getFullYear();
+
     return (
         <footer className="bg-[#12141e] pt-12">
             <div className="container">
@@ -39,6 +42,20 @@ const Footer = () => {
 
                     </div>
                     </div>
+                </div>
+
+                <div>
+                    <ul className="flex items-center gap-10 mt-10 justify-center">
+                        <li><a className="text-gray-400 font-[500]" href="#about">About</a></li>
+                        <li><a className="text-gray-400 font-[500]" href="#services">Services</a></li>
+                        <li><a className="text-gray-400 font-[500]" href="#portfolio">Portfolio</a></li>
+                        <li><a className="text-gray-400 font-[500]" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div className="flex items-center justify-center mt-10 pb-2">
+                    <p className="text-gray-400 text-[14px]">
+                        Copyright {year} developed by Chamath Harshana - All right reserved.
+                    </p>
                 </div>
             </div>
         </footer>

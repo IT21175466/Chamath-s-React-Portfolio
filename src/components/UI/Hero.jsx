@@ -72,13 +72,7 @@ const Hero = () => {
 
                                 </a>
                             </span>
-                            <span>
-                                <a href="https://www.fiverr.com/harshahandcraft" className="text-smallTextColor text-[22px] font-[500]">
-                                   <img src={fiverrIcon}/>
 
-
-                                </a>
-                            </span>
 
 
                         </div>
