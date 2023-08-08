@@ -59,7 +59,7 @@ const Header = () => {
                 {/* == MENU Right == */}
                 <div className="flex items-center gap-4">
                     <button className="flex items-center gap-2 text-smallTextColor font-[400] border border-solid border-smallTextColor py-2 px-4 rounded-[8px] max-h-[40px] hover:bg-smallTextColor hover:text-white hover:font-[400] ease-in duration-700">
-                        <i className="ri-send-plane-line">Let's Talk</i>
+                        <a className="ri-send-plane-line" href="#contact">Let's Talk</a>
                     </button>
 
                     <span onClick={toggleMenu} className="text-2xl text-smallTextColor md:hidden cursor-pointer">

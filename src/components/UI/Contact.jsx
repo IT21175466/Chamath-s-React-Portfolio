@@ -1,6 +1,27 @@
-import React from "react";
+import React, {useRef, useState} from 'react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+
+    const [isSuccess, setIsSuccess] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+        setIsLoading(true);
+
+        emailjs.sendForm('service_ayv6p4o', 'template_h37ovp9', form.current, 'h6vZB8P5plby0d2jm')
+            .then((result) => {
+                console.log(result.text);
+                setIsSuccess(true);
+                setIsLoading(false);
+                window.alert('Email sent successfully!');
+            }, (error) => {
+                console.log(error.text);
+            });
+    };
+
     return(
         <section id="contact" className="pb-16">
             <div className="container">
@@ -16,10 +37,11 @@ const Contact = () => {
 
                     <div className="w-full mt-8 md:mt-0 md:w-1/2 sm:h-[450px] lg:flex items-center bg-indigo-100 px-
                     lg:px-8 py-8 p-10">
-                        <form className="w-full">
+                        <form className="w-full" ref={form} onSubmit={sendEmail}>
                             <div className="mb-5">
                                 <input
                                     type="text"
+                                    name="from_name"
                                     placeholder="Enter your name"
                                     className="w-full p-3 focus:outline-none rounded-[5px]"
                                 />
@@ -31,28 +53,35 @@ const Contact = () => {
                                     className="w-full p-3 focus:outline-none rounded-[5px]"
                                 />
                             </div>
-                            <div className="mb-5">
-                                <input
-                                    type="text"
-                                    placeholder="Subject"
-                                    className="w-full p-3 focus:outline-none rounded-[5px]"
-                                />
-                            </div>
+
 
                             <div className="mb-5">
                                 <textarea
                                     type="text"
-                                    rows={3}
+                                    rows={4}
+                                    name="message"
                                     placeholder="Write your message"
                                     className="w-full p-3 focus:outline-none rounded-[5px]"
                                 />
                             </div>
+
+                            {isLoading && (
+                                <div className="mt-4 text-gray-600">
+                                    Sending...
+                                </div>
+                            )}
+                            {isSuccess && (
+                                <div className="mt-4 text-green-600">
+                                    Email sent successfully!
+                                </div>
+                            )}
 
                             <button className="w-full p-3 focus:outline-none rounded-[5px] bg-smallTextColor text-white
                             hover:bg-headingColor text-center ease-linear duration-150">
                                 Send Message
                             </button>
                         </form>
+
 
                     </div>
                 </div>
