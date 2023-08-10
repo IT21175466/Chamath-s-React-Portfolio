@@ -1,7 +1,5 @@
 import React from "react";
 import heroImg from "../../assets/images/profile.png"
-import fiverrIcon from "../../assets/images/fiverr.svg"
-import CountUp from "react-countup";
 
 const Hero = () => {
     return(
@@ -59,7 +57,7 @@ const Hero = () => {
                             Follow me:
                             </span>
                             <span>
-                                <a href="www.linkedin.com/in/chamath-harshana" className="text-smallTextColor text-[25px] font-[500]">
+                                <a href="https://www.linkedin.com/in/chamath-harshana/" className="text-smallTextColor text-[25px] font-[500]">
                                     <i className="ri-linkedin-box-fill"></i>
 
 
@@ -81,7 +79,7 @@ const Hero = () => {
 
                     <div className="basis-1/3 mt-10 sm:mt-0">
                         <figure className="flex items-center justify-center">
-                            <img src={heroImg}/>
+                            <img src={heroImg} alt=''/>
                         </figure>
 
                     </div>

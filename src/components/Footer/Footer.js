@@ -30,7 +30,7 @@ const Footer = () => {
                             Follow me:
                             </span>
                         <span className="w-[35px] h-[35px] bg-[#2b2d33] p-1 rounded-[50px] cursor-pointer text-center">
-                                <a href="www.linkedin.com/in/chamath-harshana" className="text-gray-300 text-[18px] font-[500]">
+                                <a href="https://www.linkedin.com/in/chamath-harshana/" className="text-gray-300 text-[18px] font-[500]">
                                     <i className="ri-linkedin-box-line"></i>
                                 </a>
                             </span>

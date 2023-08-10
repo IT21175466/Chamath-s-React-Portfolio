@@ -1,5 +1,4 @@
 import React from "react";
-import frontendImg from "../../assets/images/front-end.png"
 
 const Services = () => {
     return(

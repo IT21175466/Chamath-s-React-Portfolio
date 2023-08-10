@@ -1,4 +1,4 @@
-import portfolioImg01 from "../images/portfolio-01.jpg";
+import portfolioImg01 from "../images/portfolio-01.png";
 import portfolioImg02 from "../images/portfolio-02.jpg";
 import portfolioImg03 from "../images/portfolio-03.jpg";
 import portfolioImg04 from "../images/portfolio-04.jpg";
@@ -11,11 +11,11 @@ const portfolios = [
         id: "01",
         imgUrl: portfolioImg01,
         category: "Flutter",
-        title: "Finance Technology Website",
+        title: "Quiz App Using BLOC",
         description:
-            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium vitae sunt magnam numquam esse ipsam? Quis qui enim, temporibus dignissimos atque repellendus amet a velit. Dolorem quidem animi doloribus saepe!",
-        technologies: ["React", "Tailwind css", "Node.js", "MongoDB"],
-        siteUrl: "#",
+            "This is a Simple Quiz App Using Flutter BLOC (Business Logic Component) State Management Pattern. Users can do quiz and If the answer is correct app will give a small right mark animation and, if the anser is incorrect app will give a snackbar message to the user.",
+        technologies: ["Flutter", "Dart",  "State Management", "BLOC"],
+        siteUrl: "https://github.com/IT21175466/My-Quiz",
     },
     {
         id: "02",
